@@ -18,7 +18,7 @@
     </style>
 	</head>
 	<body>
-		<script type="importmap">
+		<!-- <script type="importmap">
 			{
 				"imports": {
 					"three": "./js/build/three.webgpu.js",
@@ -26,13 +26,13 @@
 					"three/addons/": "./js/"
 				}
 			}
-		</script>
+		</script> -->
 		<script type="module">
-			import * as THREE from 'three';
-			import { pass, mrt, output, bloom, emissive } from 'three/tsl';
-			import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
-			import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-			import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+			import * as THREE from "./js/build/three.webgpu.js";
+			import { pass, mrt, output, bloom, emissive } from "./js/build/three.webgpu.js";
+			import { RGBELoader } from "./js/loaders/RGBELoader.js";
+			import { OrbitControls } from "./js/controls/OrbitControls.js";
+			import { GLTFLoader } from "./js/loaders/GLTFLoader.js";
 
 			let camera, scene, renderer, postProcessing;
 
