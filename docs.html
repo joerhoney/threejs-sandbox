@@ -16,23 +16,24 @@
         overflow: hidden;
       }
     </style>
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.10.0/dist/es-module-shims.js"></script>
 	</head>
 	<body>
-		<!-- <script type="importmap">
+		<script type="importmap">
 			{
 				"imports": {
 					"three": "./js/build/three.webgpu.js",
 					"three/tsl": "./js/build/three.webgpu.js",
-					"three/addons/": "./js/"
+					"addons/": "./js/"
 				}
 			}
-		</script> -->
+		</script>
 		<script type="module">
-			import * as THREE from "./js/build/three.webgpu.js";
-			import { pass, mrt, output, bloom, emissive } from "./js/build/three.webgpu.js";
-			import { RGBELoader } from "./js/loaders/RGBELoader.js";
-			import { OrbitControls } from "./js/controls/OrbitControls.js";
-			import { GLTFLoader } from "./js/loaders/GLTFLoader.js";
+			import * as THREE from "three";
+			import { pass, mrt, output, bloom, emissive } from "three/tsl";
+			import { RGBELoader } from "addons/loaders/RGBELoader.js";
+			import { OrbitControls } from "addons/controls/OrbitControls.js";
+			import { GLTFLoader } from "addons/loaders/GLTFLoader.js";
 
 			let camera, scene, renderer, postProcessing;
 
